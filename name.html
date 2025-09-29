@@ -1,0 +1,121 @@
+      <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Login</title>                                                     
+     <title>GSRTC Bus Search</title>                                           
+     <style>                                                                   
+          body {                                                                
+               font-family: sans-serif;                                        
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",       
+      Roboto, Helvetica, Arial, sans-serif;                                           
+              display: flex;                                                    
+             justify-content: center;                                          
+              align-items: center;                                              
+             height: 100vh;                                                    
+               background-color: #075ad6;                                        
+             margin: 0;                                                        
+           }                                                                     
+                                                           
+         .search-container {                                                   
+              background-color: rgb(87, 10, 219);                                          
+           padding: 2rem;                                                     
+           border-radius: 5px;                                                 
+           box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);                           
+              width: 300px;                                                    
+         }                                                                     
+         .login-container h1 {                                                 
+                                                                             
+         padding: 2.5rem;                                                  
+       border-radius: 8px;                                               
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);                        
+         width: 100%;                                                      
+             max-width: 400px;                                                 
+              text-align: center;                                               
+         }                                                                     
+       .search-container h1 {                                                
+         margin-bottom: 2rem;                                              
+           color: #333;                                                     
+           font-weight: 600;                                                 
+         }                                                                     
+      .input-group {                                                        
+          position: relative;                                               
+           margin-bottom: 1.5rem;                                            
+         }                                                                     
+                                                       
+    
+        .input-group input {                                                  
+               width: 100%;                                                      
+          padding: 0.5rem;                                                    
+          margin-bottom: 1rem;                                                 
+      
+           padding: 0.8rem;                                                  
+              border: 1px solid #ccc;                                          
+    border-radius: 3px;                                                       
+    
+          border-radius: 5px;                                               
+          font-size: 1rem;                                                  
+           box-sizing: border-box;                                           
+          }                                                                     
+                 .login-container button {                                   
+      
+       .swap-btn {                                                           
+             position: absolute;                                               
+         top: 50%;                                                         
+          right: 10px;                                                      
+           transform: translateY(-50%);                                      
+         background: none;                                                 
+           border: none;                                                     
+          cursor: pointer;                                                  
+             font-size: 1.5rem;                                                
+            color: #007bff;                                                   
+         }                                                                     
+         .search-btn {                                                         
+             width: 100%;                                                      
+             padding: 0.5rem;                                                  
+     
+            padding: 0.8rem;                                                  
+               background-color: #007bff;                                       
+               color: white;                                                     
+             border: none;                                                     
+             border-radius: 3px;                                               
+             border-radius: 5px;                                               
+             font-size: 1rem;                                                  
+             cursor: pointer;                                                  
+            transition: background-color 0.3s;                                
+       }                                                                     
+      .search-btn:hover {                                                   
+          background-color: #0056b3;                                       
+       }                                                                     
+       </style>                                                                  
+</head>                                                                       
+  <body>                                                                        
+                          
+    
+     <div class="search-container">                                            
+        <h1>GSRTC Bus Search</h1>                                             
+       <form id="search-form">                                               
+            <div class="input-group">                                         
+             <input type="text" id="from" placeholder="From" required>     
+          </div>                                                            
+          <div class="input-group">                                         
+              <input type="text" id="to" placeholder="To" required>         
+                 <button type="button" class="swap-btn" onclick=               
+       "swapLocations()">&#8645;</button>                                              
+          </div>                                                            
+           <button type="submit" class="search-btn">Search</button>          
+         </form>                                                               
+      </div>                                                                    
+                                                                             
+   <script>                                                                  
+     function swapLocations() {                                            
+          const fromInput = document.getElementById('from');                
+          const toInput = document.getElementById('to');                    
+          const temp = fromInput.value;                                     
+           fromInput.value = toInput.value;                                  
+          toInput.value = temp;                                             
+        }                                                                     
+   </script>                                                                 
+  </body>                                                                       
+   </html>
